@@ -36,3 +36,74 @@ print(colored('hello', 'red'))
 import datetime
 print(datetime.datetime.now())
 ```
+
+### Create QRcode
+**Requirement:**
+```shell
+pip3 install qrcode
+```
+
+**Code:**
+```python
+import qrcode
+
+img = qrcode.make('your text')
+img.save("qr.png")
+```
+
+### Download file
+**Requirement:**
+```shell
+pip3 install wget
+```
+
+**Code:**
+```python
+import wget
+
+wget.download('http://site.com/song.mp3')
+```
+
+### Print the value of laptop battery
+**Requirement:**
+```shell
+pip3 install psutil
+```
+
+**Code:**
+```python
+import psutil
+
+print(str(psutil.sensors_battery()[0]), '%')
+# output: 74 %‌
+```
+
+### Converting image formats
+**Requirement:**
+```shell
+pip3 install pillow 
+```
+
+**Code:**
+```python
+from PIL import Image
+
+img = Image.open("a.png")
+img.convert('RGB').save('a.jpg')
+```
+
+### Writing in exel file
+**Requirement:**
+```shell
+pip3 install openpyxl
+```
+
+**Code:**
+```python
+from openpyxl import Workbook
+wb = Workbook()
+
+# col : 3   row : 5
+wb.active['C5'] = 'your string'
+wb.save("output.xlsx")
+```
